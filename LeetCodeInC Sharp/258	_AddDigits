@@ -1,0 +1,23 @@
+public class Solution {
+    public int AddDigits(int num) {
+        int result = 0;
+        while(num>=1)
+        {
+            if(num%10==0)
+            num = num/10;
+            else
+            {
+                result += num%10;
+                num = num/10;
+            }
+            if(num<10)
+            {
+                num=num+result;
+                result=0;
+                if(num<10)
+                return num;
+            }
+        }
+        return;
+    }
+}
